@@ -1,1 +1,21 @@
-# 404-castom-page
+# 404 Page with Animated Terminal
+
+## Особливості
+
+- Анімований термінал із симуляцією введення команд
+- Сучасний адаптивний дизайн
+
+## Технології
+
+- HTML5  
+- CSS3  
+- JavaScript   
+- Bootstrap 
+
+## Live demo
+
+[Перейти до сторінки](https://404page-by-levk1s.netlify.app/)  
+
+---
+
+
