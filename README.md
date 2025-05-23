@@ -14,7 +14,7 @@
 
 ## Live demo
 
-[Перейти до сторінки](https://404page-by-levk1s.netlify.app/)  
+[Перейти до сторінки](https://404-castom-page.vercel.app/)  
 
 ---
 
