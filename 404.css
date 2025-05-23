@@ -1,0 +1,277 @@
+/* Стилі для сторінки 404 */
+.error-section {
+    min-height: calc(100vh - 76px - 70px); /* Висота екрану мінус висота навігації та футера */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.error-container {
+    position: relative;
+    z-index: 10;
+}
+
+.error-code {
+    font-size: 10rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.error-circle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
+    border-radius: 50%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.glitch-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: glitch 2s infinite;
+}
+
+.glitch-text {
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-5px, 5px);
+    }
+    40% {
+        transform: translate(-5px, -5px);
+    }
+    60% {
+        transform: translate(5px, 5px);
+    }
+    80% {
+        transform: translate(5px, -5px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.error-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.error-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #aaa;
+}
+
+.error-animation {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+/* Термінал */
+.terminal {
+    background-color: #0a0a0a;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.terminal-header {
+    background-color: #1a1a1a;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 6px;
+    margin-right: 10px;
+}
+
+.terminal-buttons span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-buttons span:nth-child(1) {
+    background-color: #ff5f56;
+}
+
+.terminal-buttons span:nth-child(2) {
+    background-color: #ffbd2e;
+}
+
+.terminal-buttons span:nth-child(3) {
+    background-color: #27c93f;
+}
+
+.terminal-title {
+    color: #aaa;
+    font-size: 0.8rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.terminal-body {
+    padding: 15px;
+    min-height: 150px;
+}
+
+.terminal-line {
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.terminal-prompt {
+    color: #27c93f;
+    margin-right: 10px;
+}
+
+.terminal-text {
+    color: #ddd;
+}
+
+.terminal-cursor {
+    width: 10px;
+    height: 18px;
+    background-color: #ddd;
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Анімовані елементи на фоні */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-element {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(99, 102, 241, 0.2);
+    animation: float-element 15s linear infinite;
+}
+
+.fe-1 {
+    top: 10%;
+    left: 10%;
+    animation-duration: 20s;
+}
+
+.fe-2 {
+    top: 20%;
+    right: 15%;
+    animation-duration: 25s;
+    animation-delay: 2s;
+}
+
+.fe-3 {
+    bottom: 15%;
+    left: 20%;
+    animation-duration: 18s;
+    animation-delay: 1s;
+}
+
+.fe-4 {
+    bottom: 25%;
+    right: 10%;
+    animation-duration: 22s;
+    animation-delay: 3s;
+}
+
+.fe-5 {
+    top: 50%;
+    left: 5%;
+    animation-duration: 23s;
+    animation-delay: 4s;
+}
+
+.fe-6 {
+    top: 40%;
+    right: 5%;
+    animation-duration: 19s;
+    animation-delay: 5s;
+}
+
+@keyframes float-element {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* Медіа-запити */
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 6rem;
+    }
+    
+    .error-circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .glitch-text {
+        font-size: 5rem;
+    }
+    
+    .error-title {
+        font-size: 2rem;
+    }
+    
+    .error-description {
+        font-size: 1rem;
+    }
+}
